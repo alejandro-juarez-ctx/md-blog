@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from './layout.module.css'
-import utilStyles from '../../styles/utils.module.css'
+import utilStyles from '@styles/utils.module.css'
 import Link from 'next/link'
 
 const name = `Alejandro Ju${String.fromCharCode(225)}rez`;
@@ -17,16 +17,9 @@ const Layout = ({
             <link rel="icon" href="/favicon.ico" />
             <meta
                 name="description"
-                content="Learn how to build a personal website using Next.js"
-            />
-            <meta
-                property="og:image"
-                content={`https://og-image.vercel.app/${encodeURI(
-                    siteTitle
-                )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+                content="A software engineering blog sharing insights, tutorials, and experiences in various technologies and programming languages. Join me on my journey as a software engineer."
             />
             <meta name="og:title" content={siteTitle} />
-            <meta name="twitter:card" content="summary_large_image" />
         </Head>
         <header className={styles.header}>
             {home ? (
@@ -43,7 +36,7 @@ const Layout = ({
             </>
             ) : (
             <>
-                <Link href="/">
+                <Link href="/" legacyBehavior>
                 <a>
                     <Image
                     priority
@@ -56,7 +49,7 @@ const Layout = ({
                 </a>
                 </Link>
                 <h2 className={utilStyles.headingLg}>
-                <Link href="/">
+                <Link href="/" legacyBehavior>
                     <a className={utilStyles.colorInherit}>{name}</a>
                 </Link>
                 </h2>
@@ -66,7 +59,7 @@ const Layout = ({
         <main>{children}</main>
         {!home && (
             <div className={styles.backToHome}>
-            <Link href="/">
+            <Link href="/" legacyBehavior>
                 <a>← Back to home</a>
             </Link>
             </div>

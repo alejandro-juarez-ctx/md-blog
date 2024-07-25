@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout/layout'
-import { getSortedPostsData } from '../lib/posts';
-import utilStyles from '../styles/utils.module.css';
+import Layout, { siteTitle } from '@components/layout/layout'
+import { getSortedPostsData } from '@lib/posts';
+import utilStyles from '@styles/utils.module.css';
 import Link from 'next/link';
-import Date from '../components/date/date';
+import Date from '@components/date/date';
 
 export const getStaticProps = async() => {
     const allPostsData = getSortedPostsData();
@@ -31,7 +31,7 @@ const Home = ({
                     {
                         allPostsData.map(({ id, date, title }) => (
                             <li className={utilStyles.listItem} key={id}>
-                                <Link href={`/posts/${id}`}>
+                                <Link href={`/posts/${id}`} legacyBehavior>
                                     <a>{title}</a>
                                 </Link>
                                 <br />
