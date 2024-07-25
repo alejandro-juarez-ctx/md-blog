@@ -1,0 +1,54 @@
+.headerWrapper {
+    background: linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.6)), url('../../public/images/header.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: auto 20%;
+}
+
+.headerTitleWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.headerTitle {
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.headerSubtitle {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.headerContent {
+    display: flex;
+    padding: 20px 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerMenuItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.headerMenuItem {
+    list-style: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}

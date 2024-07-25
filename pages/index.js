@@ -23,7 +23,9 @@ const Home = ({
                 <title>{siteTitle}</title>
             </Head>
             <section className={utilStyles.headingMd}>
-                <p>Heyo, world!</p>
+                <p>
+                    A software engineering blog sharing insights, tutorials, and experiences in various technologies and programming languages. Join me on my journey as a software engineer.
+                </p>
             </section>
             <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
                 <h2 className={utilStyles.headingLg}>Blog</h2>
